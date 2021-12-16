@@ -1,0 +1,41 @@
+{% extends "base_layout.html" %}
+
+{% block content %}
+<div id="container" class="container">
+    <div class="row">
+        <div class="col-sm-5 offset-sm-3 text-center">
+            <div class="info-form">
+                <form action="add/{{ category }}" method="post" enctype="multipart/form-data" class="form">
+                    {% csrf_token %}
+                    <div class="form-group" style = "margin:1% ; padding:1%">
+                        <h3>Add a memory to {{category}}</h3>
+                    </div>
+                    <div class="form-group " style = "margin:1% ; padding:1%">
+                        <label>Title</label>
+                        <input name="title" placeholder="Title" class="form-control">
+                    </div>
+                    <div class="form-group" style = "margin:1% ; padding:1%">
+                        <label>Location</label>
+                        <input name="location" class="form-control" placeholder="Location">
+                    </div>
+                    <div class="form-group" style = "margin:1% ; padding:1%">
+                        <label>Memory Description</label>
+                        <textarea name="description" class="form-control inputstl" rows="3"
+                            placeholder="Description"></textarea>
+
+                    </div>
+                    <div class="form-group" style = "margin:1% ; padding:1%">
+                        <input type="date" name="date">
+                    </div>
+                    <div class="form-group" style = "margin:1% ; padding:1%">
+                        <input type="file" name="MemoryImage">
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary" style = "margin:1%">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

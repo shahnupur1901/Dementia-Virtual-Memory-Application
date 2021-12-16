@@ -1,0 +1,20 @@
+{% extends "base_layout.html" %}
+
+{% block content %}
+<form method="post" action="addedCategory" enctype="multipart/form-data" class="form">
+  {% csrf_token %}
+  <div id="container" class="container">
+    <div class="row">
+      <div class="col-sm-5 offset-sm-3 text-center">
+        <div class="info-form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Enter the new category</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              name = "category" placeholder="Enter category">
+              <button type="submit" class="btn btn-primary" style = "margin:1%">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

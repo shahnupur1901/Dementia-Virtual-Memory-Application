@@ -1,0 +1,22 @@
+{% extends "emergencyApp/index.html" %}
+{% block content2 %}
+<form action="send_msg" method="post" enctype="multipart/form-data" class="form">
+    {% csrf_token %}
+
+    <div class="form-group " style="margin:1% ; padding:1%">
+        <label>Enter your message</label>
+        <br>
+        <textarea style="margin:2%" name="message" class="form-control inputstl" rows="3"
+            placeholder="Message : "></textarea>
+        <label>Please modify your location if you feel so:</label>
+        <br>
+        <textarea id = "loc" style="margin:2%" name="location" class="form-control inputstl" rows="3"></textarea>
+       
+        <br>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+</form>
+<script type="text/javascript">
+    document.getElementById("loc").innerHTML = " {{address}} ";
+</script>
+{% endblock %}

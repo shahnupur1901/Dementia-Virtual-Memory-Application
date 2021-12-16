@@ -1,0 +1,96 @@
+{% extends "base_layout.html" %}
+{% block content %}
+<div id="container" class="container">
+    <div class="row" style="padding:1%">
+        <div class="col-sm-5 offset-sm-3 text-center">
+
+            <div class="info-form">
+                <form action="joke" style="margin:2%" method="POST" enctype="multipart/form-data" class="form">
+                    {% csrf_token %}
+                    <label style="margin:2%">We have just the thing to cheer you up!</label>
+                    <br>
+                    <button type="submit" class="btn btn-primary" style="margin:2%">Click here for a joke</button>
+                </form>
+                {% block content3 %}
+                {% endblock %}
+                <form action="contacts" method="POST" enctype="multipart/form-data" class="form">
+                    {% csrf_token %}
+                    <button style="margin:2%" type="submit" class="btn btn-primary">Add emergency contacts</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding:1%">
+        <div class="col-sm-5 offset-sm-3 text-center">
+            <div class="info-form">
+                <form action="send" method="POST" enctype="multipart/form-data" class="form">
+                    {% csrf_token %}
+                    <input type="hidden" name="latitude" id="lat" value = ""/>
+                    <input type="hidden" name="longitude" id="lon" value=" " />
+                    <button type="button" class="btn btn-primary" onclick="javascript:getLocation()">Get Location</button>
+                    <p id="msg" style="padding:1%"></p>
+                    <button type="submit" class="btn btn-primary ">Send message</button>
+                </form>
+
+                <ul class="list-group" style="padding:1%;margin:5%">
+                    {% for contact in contacts %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ contact.name }}
+                        <form action="del/{{ contact.name }}" method="POST" enctype="multipart/form-data" class="form">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary" style="padding:0%;margin:0%"><i
+                                    class="fa fa-remove"></i></button>
+                        </form>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="row" style="padding:1%">
+                    <div class="col-sm-5 offset-sm-3 text-center"></div>
+
+                    {% block content2 %}
+                    {% endblock %}
+
+                </div>
+
+                <div class="row" style="padding:1%">
+                    <div class="col-sm-5 offset-sm-3 text-center">
+
+
+                        {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <p {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </p>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <script>
+        var x = document.getElementById("lat");
+        var y = document.getElementById("lon");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+                y.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("lat").value = position.coords.latitude
+            document.getElementById("lon").value = position.coords.longitude
+            document.getElementById("msg").innerHTML = "Location recorded for sending message."
+        }
+    </script>
+    {% endblock %}
