@@ -20,14 +20,17 @@ Joke API for joke retrieval in JSON format
 HTML 5 Geolocation API in Javascript to determine user coordinates
 MapMyIndia API used for reverse geocoding to map an address to coordinates to get in JSON format
 
+Home Page, Registration and Signing in:
 https://user-images.githubusercontent.com/67814929/151781683-f62e98a4-af66-45d7-ad7f-ea6a3c706777.mp4
 
-https://user-images.githubusercontent.com/67814929/151781683-f62e98a4-af66-45d7-ad7f-ea6a3c706777.mp4
-
+Emergency feature:
 https://user-images.githubusercontent.com/67814929/151781724-3b7682ec-ff3c-4f66-8c65-dc8d4d0df1f8.mp4
 
+Memory gallery feature:
 https://user-images.githubusercontent.com/67814929/151781706-7f04fb99-0ddb-4ad4-9ed6-f5cc0dce4028.mp4
 
+To do list :
 https://user-images.githubusercontent.com/67814929/151781736-711db761-0398-4c6c-9bf1-e9490a1c3fe0.mp4
 
-
+About Me page
+https://user-images.githubusercontent.com/67814929/151782217-1e039387-bfc1-45ee-8fb2-ac2b80806a2e.mp4
