@@ -1,9 +1,6 @@
 # Dementia-Virtual-Memory-Application
 
 This is a web application for patients with dementia to reminiscence with an interactive photo gallery and contact their loved ones during emergencies.
-
-![solace](https://user-images.githubusercontent.com/67814929/149368595-204bb542-cdc0-4c09-af6f-5a96177edf02.png)
-
 -Technological features covered.
 -Python Django :
 -Libraries & frameworks : 
@@ -19,6 +16,8 @@ This is a web application for patients with dementia to reminiscence with an int
 -Joke API for joke retrieval in JSON format
 -HTML 5 Geolocation API in Javascript to determine user coordinates
 -MapMyIndia API used for reverse geocoding to map an address to coordinates to get in JSON format
+![solace](https://user-images.githubusercontent.com/67814929/149368595-204bb542-cdc0-4c09-af6f-5a96177edf02.png)
+
 
 Home Page, Registration and Signing in:
 
