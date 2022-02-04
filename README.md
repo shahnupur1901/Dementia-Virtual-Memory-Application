@@ -1,8 +1,8 @@
 # Dementia-Virtual-Memory-Application
 
 This is a web application for patients with dementia to reminiscence with an interactive photo gallery and contact their loved ones during emergencies.
--Technological features covered.
--Python Django :
+-Technological features covered.<br />
+Python Django :
 -Libraries & frameworks : 
 -requests (for APIs)
 -login_required decorators for page restriction
