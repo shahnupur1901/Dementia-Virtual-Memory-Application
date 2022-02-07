@@ -19,6 +19,12 @@ Technological features covered : <br />
 - HTML 5 Geolocation API in Javascript to determine user coordinates<br />
 - MapMyIndia API used for reverse geocoding to map an address to coordinates to get in JSON format<br />
 
+Important files to understand the code :
+1. views.py
+2. Templates
+3. models.py
+4. urls.py
+
 Home Page, Registration and Signing in:
 
 https://user-images.githubusercontent.com/67814929/151781683-f62e98a4-af66-45d7-ad7f-ea6a3c706777.mp4
